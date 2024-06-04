@@ -5,6 +5,7 @@
         "status":"inactive",
         "type":"diagnose",
         "startDate":"2001",
+        "endDate": nil,
         "bodyLocation":"Gehele polsregio (lichaamsstructuur), Rechts"
     }
 ]
