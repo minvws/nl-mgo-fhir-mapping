@@ -14,10 +14,10 @@
   ],
   "entry": [
     {
-      "fullUrl": "https://dva.test.mgo.irealisatie.nl/fhir/Condition/3c77bb22-795d-4e5e-815e-1db080fca69f",
+      "fullUrl": "https://dva.test.mgo.irealisatie.nl/fhir/Condition/5b5c0994-d284-42be-a813-f575e3ae3bc4",
       "resource": {
         "resourceType": "Condition",
-        "id": "3c77bb22-795d-4e5e-815e-1db080fca69f",
+        "id": "5b5c0994-d284-42be-a813-f575e3ae3bc4",
         "meta": {
           "extension": [
             {
@@ -33,15 +33,15 @@
         },
         "text": {
           "status": "extensions",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Aandoening. Subject: Johan XXX_Helleman. Id: 2d74f3ac-e3e4-11eb-7881-020000000000 (urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6), Status: actief</caption><tbody><tr><th>Code</th><td><span title=\"Amyotrofe laterale sclerose (G12.2 - ICD-10-CM)\">Amyotrofe laterale sclerose</span></td></tr></tbody></table></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Aandoening. Subject: Johan XXX_Helleman. Id: 2d9d8a4c-e3e4-11eb-1723-020000000000 (urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6), Categorie:                               \n          <span title=\"interpretatie van diagnose (waarneembare entiteit) (282291009 - SNOMED CT)\">interpretatie van diagnose (waarneembare entiteit)</span>, Status: inactief / onbekend                        \n        </caption><tfoot><tr><td colspan=\"2\">Gevallen op kunstijsbaan.</td></tr></tfoot><tbody><tr><th>Code</th><td><span title=\"Fractuur van pols (aandoening) (31641000146105 - SNOMED CT)\">Fractuur van pols (aandoening)</span></td></tr><tr><th>Eerste symptomen</th><td>2001</td></tr></tbody></table></div>"
         },
         "identifier": [
           {
             "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6",
-            "value": "2d74f3ac-e3e4-11eb-7881-020000000000"
+            "value": "2d9d8a4c-e3e4-11eb-1723-020000000000"
           }
         ],
-        "clinicalStatus": "active",
+        "clinicalStatus": "inactive",
         "_clinicalStatus": {
           "extension": [
             {
@@ -50,27 +50,86 @@
                 "coding": [
                   {
                     "system": "http://snomed.info/sct",
-                    "code": "55561003",
-                    "display": "Actueel"
+                    "code": "73425007",
+                    "display": "Inactief (kwalificatiewaarde)"
                   }
                 ]
               }
             }
           ]
         },
-        "code": {
-          "coding": [
+        "verificationStatus": "unknown",
+        "_verificationStatus": {
+          "extension": [
             {
-              "system": "urn:oid:2.16.840.1.113883.6.90",
-              "code": "G12.2",
-              "display": "Amyotrofe laterale sclerose"
+              "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/v3/NullFlavor",
+                    "code": "UNK",
+                    "display": "Unknown"
+                  }
+                ]
+              }
             }
           ]
         },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "282291009",
+                "display": "interpretatie van diagnose (waarneembare entiteit)"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "31641000146105",
+              "display": "Fractuur van pols (aandoening)"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "extension": [
+              {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "24028007",
+                      "display": "Rechts"
+                    }
+                  ]
+                }
+              }
+            ],
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "361289009",
+                "display": "Gehele polsregio (lichaamsstructuur)"
+              }
+            ]
+          }
+        ],
         "subject": {
           "reference": "Patient/93cde269-ce35-4077-a39d-19296670e949",
           "display": "Johan XXX_Helleman"
-        }
+        },
+        "onsetDateTime": "2001",
+        "note": [
+          {
+            "text": "Gevallen op kunstijsbaan."
+          }
+        ]
       },
       "search": {
         "mode": "match"
