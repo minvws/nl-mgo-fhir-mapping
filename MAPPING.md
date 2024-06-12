@@ -1,5 +1,5 @@
- Model | Mapping 
-|----------|----------|
-| MgoMedication    | [packages/fhir-data/src/resource/getMgoMedicationStatements/getMgoMedicationStatements.ts](https://github.com/minvws/nl-mgo-app-web-private/blob/main/packages/fhir-data/src/resource/getMgoMedicationStatements/getMgoMedicationStatements.ts)
-| MgoObservation    | [packages/fhir-data/src/resource/getMgoObservations/getMgoObservations.ts](https://github.com/minvws/nl-mgo-app-web-private/blob/main/packages/fhir-data/src/resource/getMgoObservations/getMgoObservations.ts)
-| MgoConcern       | [packages/fhir-data/src/resource/getMgoConditions/getMgoConditions.ts](https://github.com/minvws/nl-mgo-app-web-private/blob/main/packages/fhir-data/src/resource/getMgoConditions/getMgoConditions.ts)
+ Model | Path | Mapping 
+|----------|----------| ----------|
+| MgoMedication    | [MedicationStatement](MedicationStatement/?category=urn:oid:2.16.840.1.[…]0.20.77.5.3%7C6&_include=MedicationStatement:medication) | [packages/fhir-data/src/resource/getMgoMedicationStatements/getMgoMedicationStatements.ts](https://github.com/minvws/nl-mgo-app-web-private/blob/main/packages/fhir-data/src/resource/getMgoMedicationStatements/getMgoMedicationStatements.ts)
+| MgoObservation    | [Observation](Observation/$lastn?category=http://snomed.info/sct%7C275711006&_include=Observation:related-target&_include=Observation:specimen) |  [packages/fhir-data/src/resource/getMgoObservations/getMgoObservations.ts](https://github.com/minvws/nl-mgo-app-web-private/blob/main/packages/fhir-data/src/resource/getMgoObservations/getMgoObservations.ts)
+| MgoConcern       | [Condition](Condition?_format=json) | [packages/fhir-data/src/resource/getMgoConditions/getMgoConditions.ts](https://github.com/minvws/nl-mgo-app-web-private/blob/main/packages/fhir-data/src/resource/getMgoConditions/getMgoConditions.ts)
